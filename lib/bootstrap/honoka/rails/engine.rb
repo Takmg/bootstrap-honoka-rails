@@ -1,4 +1,4 @@
-require_relative 'engine'
+require_relative 'version'
 
 case Bootstrap::Honoka::Rails.major_ver
 when 4 then require 'bootstrap'
