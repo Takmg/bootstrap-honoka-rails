@@ -1,10 +1,10 @@
 # Bootstrap-Honoka-Rails
 
 [honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
-bootstrap-honoka-rails can easily install honoka on rails.
+bootstrap-honoka-rails can easily install honoka,umi and nico on rails.
 
 [honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
-bootstrap-honoka-rails は honoka を rails 上に簡単にインストールできます。
+bootstrap-honoka-rails は honoka や nico や umi を rails 上に簡単にインストールできます。
 
 ## Installation
 
@@ -52,6 +52,29 @@ and add to application.js [ //= require popper, //= require bootstrap-sprockets 
 
 [日本語訳]
 とりあえずインストール後、上記を application.css と application.js に追加すれば OK です。
+
+Certain [versions](VERSIONS.md) also support nico and umi.
+
+```app/assets/stylesheets/application.css
+ *= require _umi # Add line
+ *= require_self
+```
+
+or
+
+```app/assets/stylesheets/application.css
+ *= require _nico # Add line
+ *= require_self
+```
+
+[日本語訳]
+特定のバージョンでは "nico"と "umi"も対応しています。
+`honoka` の代わりに `*= require _nico` と書けば nico になりますし、 `umi` と書けば umi デザインになります。
+
+Please check [VERSIONS.md](VERSIONS.md) for honoka nico umi compatible Ver.
+
+[日本語訳]
+honoka nico umi の対応 Ver は[VERSIONS.md](VERSIONS.md)をご確認ください。
 
 ## Notice
 
