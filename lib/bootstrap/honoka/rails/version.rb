@@ -1,7 +1,10 @@
 module Bootstrap
   module Honoka
     module Rails
-      VERSION = '3.3.7'.freeze
+      VERSION = '4.3.1'.freeze
+      def self.major_ver
+        VERSION.split('.').first.to_i
+      end
     end
   end
 end

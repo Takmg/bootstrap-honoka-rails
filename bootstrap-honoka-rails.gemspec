@@ -17,13 +17,13 @@ Gem::Specification.new do |spec|
   spec.files = Dir['{assets,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   spec.test_files = `git ls-files -- test/*`.split("\n")
 
-  major_ver = Bootstrap::Honoka::Rails::VERSION.split('.').first.to_i
-  case major_ver
-  when 3 then spec.add_dependency 'bootstrap-sass', "~>#{spec.version}"
+  case Bootstrap::Honoka::Rails.major_ver
   when 4 then spec.add_dependency 'bootstrap', "~>#{spec.version}"
+  when 3 then spec.add_dependency 'bootstrap-sass', "~>#{spec.version}"
   end
 
   # Testing dependencies
+  spec.add_development_dependency 'jquery-rails' , '>= 4.3.3'
   spec.add_development_dependency 'minitest', '~> 5.11.3'
   spec.add_development_dependency 'minitest-reporters', '~> 1.3.6'
 end

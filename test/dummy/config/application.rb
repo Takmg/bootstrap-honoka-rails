@@ -1,9 +1,9 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'jquery-rails'
 
 Bundler.require(*Rails.groups)
-# require 'bootstrap-honoka-rails'
 
 module Dummy
   class Application < Rails::Application

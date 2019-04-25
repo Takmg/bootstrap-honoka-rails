@@ -1,9 +1,8 @@
-require_relative 'version'
+require_relative 'engine'
 
-major_ver = Bootstrap::Honoka::Rails::VERSION.split('.').first.to_i
-case major_ver
-when 3 then require 'bootstrap-sass'
+case Bootstrap::Honoka::Rails.major_ver
 when 4 then require 'bootstrap'
+when 3 then require 'bootstrap-sass'
 end
 
 module Bootstrap
@@ -13,7 +12,7 @@ module Bootstrap
         isolate_namespace Bootstrap::Honoka::Rails
 
         # initializer
-        initializer 'bootstrap-honoka4.assets' do |app|
+        initializer 'bootstrap-honoka-rails.assets' do |app|
           %w[stylesheets].each do |sub|
             app.config.assets.paths << root.join('assets', sub).to_s
           end
