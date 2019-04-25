@@ -1,17 +1,17 @@
-# Bootstrap::Honoka4
+# Bootstrap-Honoka-Rails
 
 [honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
-bootstrap-honoka4 can easily install honoka on rails.
+bootstrap-honoka-rails can easily install honoka on rails.
 
 [honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
-bootstrap-honoka4 は honoka を rails 上に簡単にインストールできます。
+bootstrap-honoka-rails は honoka を rails 上に簡単にインストールできます。
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap-honoka4' , '~>4.3.1'
+gem 'bootstrap-honoka-rails' , '~>4.3.1'
 ```
 
 And then execute:
@@ -20,13 +20,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bootstrap-honoka4
+    $ gem install bootstrap-honoka-rails
 
 [日本語訳]
 gemfile にこれ書いておけばいいと思います。
 
 ```ruby
-gem 'bootstrap-honoka4' , '~>4.3.1'
+gem 'bootstrap-honoka-rails' , '~>4.3.1'
 ```
 
 ## Usage
@@ -43,10 +43,10 @@ Add to application.css [ *= require _honoka ]
 
 ## Notice
 
-bootstrap-honoka4 uses bootstrap internally.
+bootstrap-honoka-rails uses bootstrap internally.
 
 [日本語訳]
-bootstrap-honoka4 は bootstrap を内部的に使っています。
+bootstrap-honoka-rails は bootstrap を内部的に使っています。
 
 ## License
 

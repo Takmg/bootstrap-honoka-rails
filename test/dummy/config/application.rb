@@ -3,7 +3,7 @@ require_relative 'boot'
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-# require 'bootstrap-honoka4'
+# require 'bootstrap-honoka-rails'
 
 module Dummy
   class Application < Rails::Application

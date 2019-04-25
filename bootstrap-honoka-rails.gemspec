@@ -1,15 +1,15 @@
 $LOAD_PATH.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
-require 'bootstrap/honoka4/version'
+require 'bootstrap/honoka/rails/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = 'bootstrap-honoka4'
-  spec.version     = Bootstrap::Honoka4::VERSION
+  spec.name        = 'bootstrap-honoka-rails'
+  spec.version     = Bootstrap::Honoka::Rails::VERSION
   spec.authors     = ['Takmg']
   spec.email       = ['Takmg@example.com']
-  spec.homepage    = 'https://github.com/Takmg/bootstrap-honoka4'
+  spec.homepage    = 'https://github.com/Takmg/bootstrap-honoka-rails'
   spec.summary     = 'Gem to handle -Bootstrap honoka- easily'
   spec.description = 'Gem to handle -Bootstrap honoka- easily'
   spec.license     = 'MIT'
