@@ -1,4 +1,9 @@
-require 'bootstrap'
+require_relative 'engine'
+
+case Bootstrap::Honoka::Rails.major_ver
+when 4 then require 'bootstrap'
+when 3 then require 'bootstrap-sass'
+end
 
 module Bootstrap
   module Honoka
