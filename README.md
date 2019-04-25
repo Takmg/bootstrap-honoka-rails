@@ -1,4 +1,4 @@
-# Rails::Honoka4
+# Bootstrap::Honoka4
 
 [honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
 bootstrap-honoka4 can easily install honoka on rails.
