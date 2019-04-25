@@ -1,0 +1,17 @@
+.sass-cache
+Gemfile.lock
+*.gemfile.lock
+
+
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+.DS_Store
+
+# rspec failure tracking
+.rspec_status
