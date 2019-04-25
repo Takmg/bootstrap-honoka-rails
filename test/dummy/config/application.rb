@@ -2,6 +2,7 @@ require_relative 'boot'
 
 require 'rails/all'
 require 'jquery-rails'
+require 'sprockets'
 
 Bundler.require(*Rails.groups)
 
