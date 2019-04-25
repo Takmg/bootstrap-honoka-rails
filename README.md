@@ -38,8 +38,20 @@ Add to application.css [ *= require _honoka ]
  *= require_self
 ```
 
+and add to application.js [ //= require popper, //= require bootstrap-sprockets , //= require bootstrap.min]
+
+```app/assets/javascripts/application.js
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require popper # add line
+//= require bootstrap-sprockets # add line
+//= require bootstrap.min # add line
+//= require_tree .
+```
+
 [日本語訳]
-とりあえずインストール後、上記を application.css に追加すれば OK です。
+とりあえずインストール後、上記を application.css と application.js に追加すれば OK です。
 
 ## Notice
 
