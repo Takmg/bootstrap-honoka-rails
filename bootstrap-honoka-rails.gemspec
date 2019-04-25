@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
   end
 
   # Testing dependencies
+  spec.add_development_dependency 'jquery-rails' , '>= 4.3.3'
   spec.add_development_dependency 'minitest', '~> 5.11.3'
   spec.add_development_dependency 'minitest-reporters', '~> 1.3.6'
 end
