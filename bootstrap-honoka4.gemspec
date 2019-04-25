@@ -15,6 +15,11 @@ Gem::Specification.new do |spec|
   spec.license     = 'MIT'
 
   spec.files = Dir['{assets,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.test_files = `git ls-files -- test/*`.split("\n")
 
   spec.add_dependency 'bootstrap', "~>#{spec.version}"
+
+  # Testing dependencies
+  spec.add_development_dependency 'minitest', '~> 5.11.3'
+  spec.add_development_dependency 'minitest-reporters', '~> 1.3.6'
 end

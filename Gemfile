@@ -4,4 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 # To use a debugger
-# gem 'byebug', group: [:development, :test]
+group :debug do
+  gem 'byebug', platforms: [:mri], require: false
+end
