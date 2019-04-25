@@ -1,4 +1,10 @@
-require 'bootstrap'
+require_relative 'version'
+
+major_ver = Bootstrap::Honoka::Rails::VERSION.split('.').first.to_i
+case major_ver
+when 3 then require 'bootstrap-sass'
+when 4 then require 'bootstrap'
+end
 
 module Bootstrap
   module Honoka
