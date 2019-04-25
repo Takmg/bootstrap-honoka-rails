@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#root'
+  get 'page/honoka'
+  get 'page/umi'
+  get 'page/nico'
 end
