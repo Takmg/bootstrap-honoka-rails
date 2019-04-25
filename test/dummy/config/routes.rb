@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'page/honoka'
-  get 'page/umi'
-  get 'page/nico'
+  get 'pages/honoka'
+  get 'pages/umi'
+  get 'pages/nico'
 end
