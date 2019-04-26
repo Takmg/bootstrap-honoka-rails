@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 // Core variables
-@import "honoka/variables";
+@import "./variables";
 // Core mixins
 @import "bootstrap/mixins";
-@import "honoka/mixins";
+@import "./mixins";
 
 // Honoka Font Setting
-@import "honoka/font";
+@import "./font";
 
 @import "bootstrap/normalize";
 @import "bootstrap/grid";
@@ -57,4 +57,4 @@
 @import "bootstrap/responsive-utilities";
 
 // Honoka Original Setting
-@import "honoka/override";
+@import "./override";
