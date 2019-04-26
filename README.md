@@ -1,10 +1,10 @@
 # Bootstrap-Honoka-Rails
 
 [honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
-bootstrap-honoka-rails can easily install [honoka](https://github.com/windyakin/Honoka),[Umi](https://ysakasin.github.io/Umi/) and [Nico](https://nico.kubosho.com/) on rails.
+bootstrap-honoka-rails can easily install [honoka](https://github.com/windyakin/Honoka),[Umi](https://ysakasin.github.io/Umi/) , [Nico](https://nico.kubosho.com/) and [Rin](https://rinhoshizo.la/) on rails.
 
 [honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
-bootstrap-honoka-rails は [honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) を rails 上に簡単にインストールできます。
+bootstrap-honoka-rails は [honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) や [Rin](https://rinhoshizo.la/) を rails 上に簡単にインストールできます。
 
 ## Installation
 
@@ -44,7 +44,7 @@ and add to application.js [ //= require popper, //= require bootstrap-sprockets 
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require popper # add line
+//= require popper # add line ※ v4 later
 //= require bootstrap-sprockets # add line
 //= require bootstrap.min # add line
 //= require_tree .
@@ -55,7 +55,7 @@ and add to application.js [ //= require popper, //= require bootstrap-sprockets 
 
 ---
 
-Certain [versions](VERSIONS.md) also support nico and umi.
+Certain [versions](VERSIONS.md) also support Nico , Umi and Rin.
 
 ```app/assets/stylesheets/application.css
  *= require _umi # Add line
@@ -69,18 +69,26 @@ or
  *= require_self
 ```
 
-Please check [VERSIONS.md](VERSIONS.md) for honoka nico umi compatible Ver.
+or
 
-[日本語訳][特定のバージョン](VERSIONS.md)では "nico"と "umi"も対応しています。
-`honoka` の代わりに `*= require _nico` と書けば nico になりますし、 `umi` と書けば umi デザインになります。
-honoka nico umi の対応 Ver は[VERSIONS.md](VERSIONS.md)をご確認ください。
+```app/assets/stylesheets/application.css
+ *= require _rin # Add line
+ *= require_self
+```
+
+Please check [VERSIONS.md](VERSIONS.md) for Honoka Nico Umi Rin compatible Ver.
+
+[日本語訳][特定のバージョン](VERSIONS.md)では "Nico"と "Umi" と "Rin" も対応しています。
+`honoka` の代わりに `*= require _nico` と書けば Nico になりますし、 `_umi` と書けば Umi デザインになります。
+Rin も Ver によっては `_rin` と書けば対応出来ます。
+Honoka Nico Umi Rin の対応 Ver は[VERSIONS.md](VERSIONS.md)をご確認ください。
 
 ## Notice
 
-bootstrap-honoka-rails uses bootstrap internally.
+bootstrap-honoka-rails uses bootstrap or bootstrap-sass internally.
 
 [日本語訳]
-bootstrap-honoka-rails は bootstrap を内部的に使っています。
+bootstrap-honoka-rails は bootstrap 又は bootstrap-sass を内部的に使っています。
 
 ## License
 
