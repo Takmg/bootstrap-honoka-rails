@@ -1,10 +1,10 @@
 # Bootstrap-Honoka-Rails
 
-[honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
-bootstrap-honoka-rails can easily install [honoka](https://github.com/windyakin/Honoka),[Umi](https://ysakasin.github.io/Umi/) , [Nico](https://nico.kubosho.com/) and [Rin](https://rinhoshizo.la/) on rails.
+[Honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
+bootstrap-honoka-rails can easily install [Honoka](https://github.com/windyakin/Honoka),[Umi](https://ysakasin.github.io/Umi/) , [Nico](https://nico.kubosho.com/) and [Rin](https://rinhoshizo.la/) on Rails.
 
-[honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
-bootstrap-honoka-rails は [honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) や [Rin](https://rinhoshizo.la/) を rails 上に簡単にインストールできます。
+[Honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
+bootstrap-honoka-rails は [honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) や [Rin](https://rinhoshizo.la/) を Rails 上に簡単にインストールできます。
 
 ## Installation
 
@@ -79,7 +79,7 @@ or
 Please check [VERSIONS.md](VERSIONS.md) for Honoka Nico Umi Rin compatible Ver.
 
 [日本語訳][特定のバージョン](VERSIONS.md)では "Nico"と "Umi" と "Rin" も対応しています。
-`honoka` の代わりに `*= require _nico` と書けば Nico になりますし、 `_umi` と書けば Umi デザインになります。
+`_honoka` の代わりに `*= require _nico` と書けば Nico になりますし、 `_umi` と書けば Umi デザインになります。
 Rin も Ver によっては `_rin` と書けば対応出来ます。
 Honoka Nico Umi Rin の対応 Ver は[VERSIONS.md](VERSIONS.md)をご確認ください。
 

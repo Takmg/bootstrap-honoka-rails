@@ -1,8 +1,8 @@
 # Support Version
 
-O ... Supported and test completed
-X ... Not supported
-W ... It is possible to use but an error may occur
+- O ... Supported and test completed
+- X ... Not supported
+- W ... It is possible to use but an error may occur
 
 | Gem   | Honoka | Nico | Umi | Rin |
 | ----- | ------ | ---- | --- | --- |
