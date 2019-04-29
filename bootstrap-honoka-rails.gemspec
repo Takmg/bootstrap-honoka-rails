@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Gem to handle -Bootstrap honoka- easily'
   spec.license     = 'MIT'
 
-  spec.files = Dir['{assets,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.files = Dir['{assets,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md', 'VERSIONS.md']
   spec.test_files = `git ls-files -- test/*`.split("\n")
 
   dependency_ver = Bootstrap::Honoka::Rails.dependency_ver
