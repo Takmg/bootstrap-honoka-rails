@@ -4,7 +4,7 @@
 bootstrap-honoka-rails can easily install [Honoka](https://github.com/windyakin/Honoka),[Umi](https://ysakasin.github.io/Umi/) , [Nico](https://nico.kubosho.com/) and [Rin](https://rinhoshizo.la/) on Rails.
 
 [Honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
-bootstrap-honoka-rails は [honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) や [Rin](https://rinhoshizo.la/) を Rails 上に簡単にインストールできます。
+bootstrap-honoka-rails は [Honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) や [Rin](https://rinhoshizo.la/) を Rails 上に簡単にインストールできます。
 
 ## Installation
 
@@ -33,14 +33,14 @@ gem 'bootstrap-honoka-rails' , '~>4.3.1'
 
 Add to application.css [ *= require _honoka ]
 
-```app/assets/stylesheets/application.css
+```css app/assets/stylesheets/application.css
  *= require _honoka # Add line
  *= require_self
 ```
 
 and add to application.js [ //= require popper, //= require bootstrap-sprockets , //= require bootstrap.min]
 
-```app/assets/javascripts/application.js
+```js app/assets/javascripts/application.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
@@ -57,21 +57,21 @@ and add to application.js [ //= require popper, //= require bootstrap-sprockets 
 
 Certain [versions](VERSIONS.md) also support Nico , Umi and Rin.
 
-```app/assets/stylesheets/application.css
+```css app/assets/stylesheets/application.css
  *= require _umi # Add line
  *= require_self
 ```
 
 or
 
-```app/assets/stylesheets/application.css
+```css app/assets/stylesheets/application.css
  *= require _nico # Add line
  *= require_self
 ```
 
 or
 
-```app/assets/stylesheets/application.css
+```css app/assets/stylesheets/application.css
  *= require _rin # Add line
  *= require_self
 ```

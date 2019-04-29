@@ -1,8 +1,8 @@
 # Support Version
 
-- O ... Supported and test completed
-- X ... Not supported
-- W ... It is possible to use but an error may occur
+- O ... Supported and test completed(使用可能)
+- X ... Not supported(使用不可)
+- W ... It is possible to use but an error may occur(使用できるけどテスト出来てません。不具合出たらごめんなさい。)
 
 | Gem   | Honoka | Nico | Umi | Rin |
 | ----- | ------ | ---- | --- | --- |
