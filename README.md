@@ -93,3 +93,45 @@ bootstrap-honoka-rails は bootstrap 又は bootstrap-sass を内部的に使っ
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Use Bootstrap Theme
+
+#### [Honoka](https://github.com/windyakin/Honoka)
+
+Source Url ... [https://github.com/windyakin/Honoka](https://github.com/windyakin/Honoka)
+
+> The MIT License (MIT)
+>
+> Copyright (c) 2015 windyakin
+
+[License View All](https://github.com/windyakin/Honoka/blob/master/LICENSE)
+
+#### [Umi](https://ysakasin.github.io/Umi/)
+
+Source Url ... [https://github.com/ysakasin/Umi](https://github.com/ysakasin/Umi)
+
+> The MIT License (MIT)
+>
+> Copyright (c) 2015 ysakasin
+
+[License View All](https://github.com/ysakasin/Umi/blob/master/LICENSE)
+
+#### [Nico](https://nico.kubosho.com/)
+
+Source Url ... [https://github.com/kubosho/Nico](https://github.com/kubosho/Nico)
+
+> The MIT License (MIT)
+>
+> Copyright (c) 2015 windyakin, kubosho
+
+[License View All](https://github.com/kubosho/Nico/blob/master/LICENSE)
+
+#### [Rin](https://rinhoshizo.la/)
+
+Source Url ... [https://github.com/raryosu/Rin](https://github.com/raryosu/Rin)
+
+> The MIT License (MIT)
+>
+> Copyright (c) 2016 Hagihara Ryosuke
+
+[License View All](https://github.com/raryosu/Rin/blob/master/LICENSE)
