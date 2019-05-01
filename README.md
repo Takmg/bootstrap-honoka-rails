@@ -11,7 +11,7 @@ bootstrap-honoka-rails は [Honoka](https://github.com/windyakin/Honoka) や [Um
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap-honoka-rails' , '~>4.3.1'
+gem 'bootstrap-honoka-rails' , '~>4.3.1' # or '~> 3.3.7'
 ```
 
 And then execute:
@@ -26,32 +26,48 @@ Or install it yourself as:
 gemfile にこれ書いておけばいいと思います。
 
 ```ruby
-gem 'bootstrap-honoka-rails' , '~>4.3.1'
+gem 'bootstrap-honoka-rails' , '~>4.3.1' # or '~> 3.3.7'
 ```
 
 ## Usage
 
-Add to application.css [ *= require _honoka ]
+Add to application.css `*= require _honoka` <br>
+For bootstrap ver3 you need `*= _bootstrap-sprockets`.
 
 ```css app/assets/stylesheets/application.css
+/*
+ *= require _bootstrap-sprockets # Add line ※ v3 only
  *= require _honoka # Add line
  *= require_self
+ */
 ```
 
-and add to application.js [ //= require popper, //= require bootstrap-sprockets , //= require bootstrap.min]
+and add to application.js <br>
+`//= require popper` (bootstrap ver4 later), <br>
+`//= require bootstrap-sprockets` , <br>
+`//= require bootstrap.min`
 
 ```js app/assets/javascripts/application.js
+//= require jquery2
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require popper # add line ※ v4 later
 //= require bootstrap-sprockets # add line
-//= require bootstrap.min # add line
+//= require turbolinks
 //= require_tree .
 ```
 
+If you loaded `bootstrap-sprockets`, you do not need to load `bootstrap.min` .<br>
+Because Dropdown features may not work properly.<br>
+Please check [here](https://github.com/twbs/bootstrap-sass/issues/714) for more details.<br>
+(It has been tested on production environment. The sample app is in the 'test/dummy' directory. )
+
 [日本語訳]
-とりあえずインストール後、上記を application.css と application.js に追加すれば OK です。
+とりあえずインストール後、上記を application.css と application.js に追加すれば OK です。<br>
+注意点として `bootstrap-sprockets` を読み込むと思いますが、その場合 `bootstrap.min` は読み込む必要がありません。<br>
+何故なら Dropdown が正しく動作しない可能性があります。 <br>
+詳細は[こちら](https://github.com/twbs/bootstrap-sass/issues/714)をご確認ください。
+※production 環境で動作することを確認済み。 サンプルアプリは 'test/dummy' ディレクトリ内 にあります。
 
 ---
 
@@ -80,7 +96,7 @@ Please check [VERSIONS.md](VERSIONS.md) for Honoka Nico Umi Rin compatible Ver.
 
 [日本語訳][特定のバージョン](VERSIONS.md)では "Nico"と "Umi" と "Rin" も対応しています。
 `_honoka` の代わりに `*= require _nico` と書けば Nico になりますし、 `_umi` と書けば Umi デザインになります。
-Rin も Ver によっては `_rin` と書けば対応出来ます。
+Rin も Ver によっては `_rin` と書けば対応出来ます。<br>
 Honoka Nico Umi Rin の対応 Ver は[VERSIONS.md](VERSIONS.md)をご確認ください。
 
 ## Notice
