@@ -1,7 +1,7 @@
 # Bootstrap-Honoka-Rails
 
 [Honoka](https://github.com/windyakin/Honoka) is a Bootstrap theme that can display Japanese beautifully.
-bootstrap-honoka-rails can easily install [Honoka](https://github.com/windyakin/Honoka),[Umi](https://ysakasin.github.io/Umi/) , [Nico](https://nico.kubosho.com/) and [Rin](https://rinhoshizo.la/) on Rails.
+bootstrap-honoka-rails can easily install [Honoka](https://github.com/windyakin/Honoka), [Umi](https://ysakasin.github.io/Umi/) , [Nico](https://nico.kubosho.com/) and [Rin](https://rinhoshizo.la/) on Rails.
 
 [Honoka](https://github.com/windyakin/Honoka) は日本語も美しく表示できる Bootstrap テーマです。
 bootstrap-honoka-rails は [Honoka](https://github.com/windyakin/Honoka) や [Umi](https://ysakasin.github.io/Umi/) や [Nico](https://nico.kubosho.com/) や [Rin](https://rinhoshizo.la/) を Rails 上に簡単にインストールできます。
@@ -34,7 +34,9 @@ gem 'bootstrap-honoka-rails' , '~>4.3.1' # or '~> 3.3.7'
 Add to application.css `*= require _honoka` <br>
 For bootstrap ver3 you need `*= _bootstrap-sprockets`.
 
-```css app/assets/stylesheets/application.css
+app/assets/stylesheets/application.css
+
+```css
 /*
  *= require _bootstrap-sprockets # Add line ※ v3 only
  *= require _honoka # Add line
@@ -44,10 +46,11 @@ For bootstrap ver3 you need `*= _bootstrap-sprockets`.
 
 and add to application.js <br>
 `//= require popper` (bootstrap ver4 later), <br>
-`//= require bootstrap-sprockets` , <br>
-`//= require bootstrap.min`
+`//= require bootstrap-sprockets`
 
-```js app/assets/javascripts/application.js
+app/assets/javascripts/application.js
+
+```js
 //= require jquery2
 //= require rails-ujs
 //= require activestorage
@@ -66,28 +69,30 @@ Please check [here](https://github.com/twbs/bootstrap-sass/issues/714) for more 
 とりあえずインストール後、上記を application.css と application.js に追加すれば OK です。<br>
 注意点として `bootstrap-sprockets` を読み込むと思いますが、その場合 `bootstrap.min` は読み込む必要がありません。<br>
 何故なら Dropdown が正しく動作しない可能性があります。 <br>
-詳細は[こちら](https://github.com/twbs/bootstrap-sass/issues/714)をご確認ください。
+詳細は[こちら](https://github.com/twbs/bootstrap-sass/issues/714)をご確認ください。<br>
 ※production 環境で動作することを確認済み。 サンプルアプリは 'test/dummy' ディレクトリ内 にあります。
 
 ---
 
 Certain [versions](VERSIONS.md) also support Nico , Umi and Rin.
 
-```css app/assets/stylesheets/application.css
+app/assets/stylesheets/application.css
+
+```css
  *= require _umi # Add line
  *= require_self
 ```
 
 or
 
-```css app/assets/stylesheets/application.css
+```css
  *= require _nico # Add line
  *= require_self
 ```
 
 or
 
-```css app/assets/stylesheets/application.css
+```css
  *= require _rin # Add line
  *= require_self
 ```
@@ -95,7 +100,7 @@ or
 Please check [VERSIONS.md](VERSIONS.md) for Honoka Nico Umi Rin compatible Ver.
 
 [日本語訳][特定のバージョン](VERSIONS.md)では "Nico"と "Umi" と "Rin" も対応しています。
-`_honoka` の代わりに `*= require _nico` と書けば Nico になりますし、 `_umi` と書けば Umi デザインになります。
+`_honoka` の代わりに `*= require _nico` と書けば Nico になりますし、 `_umi` と書けば Umi デザインになります。 <br>
 Rin も Ver によっては `_rin` と書けば対応出来ます。<br>
 Honoka Nico Umi Rin の対応 Ver は[VERSIONS.md](VERSIONS.md)をご確認ください。
 
@@ -110,11 +115,11 @@ bootstrap-honoka-rails は bootstrap 又は bootstrap-sass を内部的に使っ
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Use Bootstrap Theme
+## Supported bootstrap themes
 
-#### [Honoka](https://github.com/windyakin/Honoka)
+#### [Honoka](http://honokak.osaka/)
 
-Source Url ... [https://github.com/windyakin/Honoka](https://github.com/windyakin/Honoka)
+Source URL ... [https://github.com/windyakin/Honoka](https://github.com/windyakin/Honoka)
 
 > The MIT License (MIT)
 >
@@ -124,7 +129,7 @@ Source Url ... [https://github.com/windyakin/Honoka](https://github.com/windyaki
 
 #### [Umi](https://ysakasin.github.io/Umi/)
 
-Source Url ... [https://github.com/ysakasin/Umi](https://github.com/ysakasin/Umi)
+Source URL ... [https://github.com/ysakasin/Umi](https://github.com/ysakasin/Umi)
 
 > The MIT License (MIT)
 >
@@ -134,7 +139,7 @@ Source Url ... [https://github.com/ysakasin/Umi](https://github.com/ysakasin/Umi
 
 #### [Nico](https://nico.kubosho.com/)
 
-Source Url ... [https://github.com/kubosho/Nico](https://github.com/kubosho/Nico)
+Source URL ... [https://github.com/kubosho/Nico](https://github.com/kubosho/Nico)
 
 > The MIT License (MIT)
 >
@@ -144,7 +149,7 @@ Source Url ... [https://github.com/kubosho/Nico](https://github.com/kubosho/Nico
 
 #### [Rin](https://rinhoshizo.la/)
 
-Source Url ... [https://github.com/raryosu/Rin](https://github.com/raryosu/Rin)
+Source URL ... [https://github.com/raryosu/Rin](https://github.com/raryosu/Rin)
 
 > The MIT License (MIT)
 >
