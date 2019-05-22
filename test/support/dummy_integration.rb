@@ -4,7 +4,6 @@ require 'fileutils'
 
 # DummyRailsIntegration
 module DummyIntegration
-
   # Mix-in
   include Capybara::DSL
   include Capybara::Minitest::Assertions
@@ -26,10 +25,10 @@ module DummyIntegration
       FileUtils.rm_rf('test/dummy/tmp/cache', secure: true)
     end
 
-    def screenshot_to_file!( path )
+    def screenshot_to_file!(path, log_append = '')
       # save screenshot!
       page.save_screenshot File.join(ROOT_PATH, path)
-      STDERR.puts "Screenshot: saved to #{path}"
+      ::Minitest::Reporters::DummyReporter.log_strings_append! "Screenshot: Saved to #{path} - #{log_append}"
     end
 
     # screenshotを撮る
@@ -46,13 +45,12 @@ module DummyIntegration
       # https://sqa.stackexchange.com/questions/9007/how-to-handle-time-out-receiving-message-from-the-renderer-in-chrome-driver
 
       # 幅と高さとWindowの取得
-      width  = Capybara.page.execute_script( 'return screen.width;' )
-      height = Capybara.page.execute_script( 'return Math.max( document.body.scrollHeight , document.body.offsetHeight , document.documentElement.clientHeight , document.documentElement.scrollHeight , document.documentElement.offsetHeight );' )
+      width  = Capybara.page.execute_script('return screen.width;')
+      height = Capybara.page.execute_script('return Math.max( document.body.scrollHeight , document.body.offsetHeight , document.documentElement.clientHeight , document.documentElement.scrollHeight , document.documentElement.offsetHeight );')
       window = Capybara.current_session.driver.browser.manage.window
-      window.resize_to( width , height )
+      window.resize_to(width, height)
 
       # スクリーンショットの保存
-      STDERR.puts "Screenshot: prepare resize #{width} : #{height}"
-      screenshot_to_file! "tmp/#{name}.png"
+      screenshot_to_file! "tmp/#{name}.png", "width=#{width}:height=#{height}"
     end
 end
