@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ['Takmg']
   spec.email       = ['Takmg@example.com']
   spec.homepage    = 'https://github.com/Takmg/bootstrap-honoka-rails'
-  spec.summary     = 'Gem to handle -Bootstrap honoka- easily'
-  spec.description = 'Gem to handle -Bootstrap honoka- easily'
+  spec.summary     = 'Gem to handle -Bootstrap Honoka, Umi, Nico, Rin- easily'
+  spec.description = 'Gem to handle -Bootstrap Honoka, Umi, Nico, Rin- easily'
   spec.license     = 'MIT'
 
   spec.files = Dir['{assets,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md', 'VERSIONS.md']
@@ -24,6 +24,9 @@ Gem::Specification.new do |spec|
   end
 
   # Testing dependencies
+  spec.add_development_dependency 'pry-byebug', '>= 3.7.0'
+  spec.add_development_dependency 'capybara', '>= 3.20.2'
+  spec.add_development_dependency 'webdrivers', '>= 3.9.4'
   spec.add_development_dependency 'jquery-rails', '>= 4.3.3'
   spec.add_development_dependency 'minitest', '~> 5.11.3'
   spec.add_development_dependency 'minitest-reporters', '~> 1.3.6'
