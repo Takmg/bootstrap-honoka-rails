@@ -14,7 +14,7 @@ require 'capybara/dsl'
 require 'webdrivers'
 
 # settings
-Webdrivers.cache_time = 10000
+Webdrivers.cache_time = 10_000
 ROOT_PATH = File.expand_path('../', File.dirname(__FILE__))
 
 # support directory files require
@@ -26,15 +26,15 @@ end
 # -----------------------------------------------------------------------------
 
 # https://groups.google.com/forum/#!topic/chromedriver-users/ZBEju24L5ww
- 
-# Settings Selenium Timeout 
+
+# Settings Selenium Timeout
 client = Selenium::WebDriver::Remote::Http::Default.new
 client.read_timeout = 1000 # 1000 second read wait
 
 # Capybara driver settings
 Capybara.register_driver :selenium_chrome_headless do |app|
   Capybara::Selenium::Driver.load_selenium
-  browser_options = ::Selenium::WebDriver::Chrome::Options.new.tap do |opts|    
+  browser_options = ::Selenium::WebDriver::Chrome::Options.new.tap do |opts|
     opts.args << 'start-maximized'
     opts.args << 'enable-automation'
     opts.args << '--window-size=1200,768'
