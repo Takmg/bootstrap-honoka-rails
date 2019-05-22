@@ -49,10 +49,6 @@ Capybara.register_driver :selenium_chrome_headless do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: browser_options, http_client: client)
 end
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, window_size: [1280, 768],  js_errors: false)
-end
-
 # Capybara settings
 Capybara.configure do |config|
   config.server_port        = 3000
