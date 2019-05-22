@@ -37,7 +37,7 @@ Capybara.register_driver :selenium_chrome_headless do |app|
   browser_options = ::Selenium::WebDriver::Chrome::Options.new.tap do |opts|    
     opts.args << 'start-maximized'
     opts.args << 'enable-automation'
-    opts.args << '--window-size=1280,768'
+    opts.args << '--window-size=992,768'
     opts.args << '--headless'
     opts.args << '--disable-gpu'
     opts.args << '--no-sandbox'
