@@ -19,8 +19,7 @@ ROOT_PATH = File.expand_path('../', File.dirname(__FILE__))
 
 # support directory files require
 Dir['test/support/**/*.rb'].each do |file|
-  file = file[4..-4]
-  require_relative File.join('.', file)
+  require_relative File.join('.', file[5..-4])
 end
 
 # -----------------------------------------------------------------------------
