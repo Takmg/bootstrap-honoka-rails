@@ -15,15 +15,26 @@ module Minitest
         end
       end
 
+      # 独自カラー
+      def cyan(string)
+        color? ? ANSI::Code.cyan(string) : string
+      end
+
+      def magenta(string)
+        color? ? ANSI::Code.magenta(string) : string
+      end
+
       # レポートを行う
       def on_report 
         super 
+        return if self.class.log_strings.empty?
         puts 
-        puts green( "-----------------------------------------" )
+        puts cyan( '------------------------------------------------------------' )
+        puts magenta( '[TEST INFO]' )
         self.class.log_strings.each do |data| 
           puts yellow( data )
         end
-        puts green( "-----------------------------------------" )
+        puts cyan( '------------------------------------------------------------' )
         puts
       end
     end

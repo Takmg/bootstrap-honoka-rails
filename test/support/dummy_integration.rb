@@ -10,7 +10,7 @@ module DummyIntegration
 
   def setup
     super
-    cleanup_dummy_files
+    cleanup_cache_files
   end
 
   def teardown
@@ -21,14 +21,14 @@ module DummyIntegration
 
   private
 
-    def cleanup_dummy_files
+    def cleanup_cache_files
       FileUtils.rm_rf('test/dummy/tmp/cache', secure: true)
     end
 
     def screenshot_to_file!(path, log_append = '')
       # save screenshot!
       page.save_screenshot File.join(ROOT_PATH, path)
-      ::Minitest::Reporters::DummyReporter.log_strings_append! "Screenshot: Saved to #{path} - #{log_append}"
+      ::Minitest::Reporters::DummyReporter.log_strings_append! "Screenshot: Saved to #{path} #{log_append}"
     end
 
     # screenshotを撮る
@@ -51,6 +51,6 @@ module DummyIntegration
       window.resize_to(width, height)
 
       # スクリーンショットの保存
-      screenshot_to_file! "tmp/#{name}.png", "width=#{width}:height=#{height}"
+      screenshot_to_file! "tmp/#{name}.png", "- W:H=#{width}:#{height}"
     end
 end
