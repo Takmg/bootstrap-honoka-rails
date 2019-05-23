@@ -44,7 +44,7 @@ module DummyIntegration
       # https://github.com/teampoltergeist/poltergeist/issues/165
       # https://sqa.stackexchange.com/questions/9007/how-to-handle-time-out-receiving-message-from-the-renderer-in-chrome-driver
 
-      # 幅と高さとWindowの取得
+      # 幅と高さを取得しブラウザのリサイズを行う。
       width  = Capybara.page.execute_script('return screen.width;')
       height = Capybara.page.execute_script('return Math.max( document.body.scrollHeight , document.body.offsetHeight , document.documentElement.clientHeight , document.documentElement.scrollHeight , document.documentElement.offsetHeight );')
       window = Capybara.current_session.driver.browser.manage.window
