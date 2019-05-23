@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
-
   # Mix-in
   include DummyIntegration
 
