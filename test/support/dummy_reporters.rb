@@ -4,14 +4,28 @@ module Minitest
   module Reporters
     class DummyReporter < DefaultReporter
 
-      # 配列データ
-      @@log_strings = []
+      # 最後にログ出力する際の文字列配列(下記注意点)
+      # 
+      # 1)特異メソッド内から下記変数を参照する為、クラス変数にするべきと思われるかもしれないが、
+      #   後にDummyReportersから継承される可能性を考慮すると、
+      #   クラスインスタンス変数を使用する方が良いとの事。
+      #   Effective Ruby 項目15
+      # 2)クラスインスタンス変数をクラスメソッドで使用する点から
+      #   SingletonをIncludeする事も考慮したが、
+      #   その場合
+      #   ・Instanceメソッドからinitializeに引数が渡せない。
+      #   ・どうしても親クラスのinitializeにデータを渡す際、
+      #       def set_options( options = {} ); initialize(options); end;
+      #     というようなRubyとして正か判断できないややこしい処理となりそうだった。
+      #     (一般的に考えてコンストラクタを無理やり呼び出す違和感のあるやり方)
+      #   という観点からSingletonは見送りとした。
+      @log_strings = []
 
       # 特異メソッド
       class << self 
-        def log_strings ; @@log_strings; end
+        def log_strings ; @log_strings; end
         def log_strings_append!( rhs )
-           @@log_strings << rhs if !rhs.nil?
+           @log_strings << rhs if !rhs.nil?
         end
       end
 
