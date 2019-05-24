@@ -4,6 +4,7 @@ require 'rails/all'
 require 'jquery-rails'
 require 'sprockets'
 require 'turbolinks'
+require 'sassc'
 
 Bundler.require(*Rails.groups)
 

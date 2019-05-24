@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'minitest', '~> 5.11.3'
   spec.add_development_dependency 'minitest-reporters', '~> 1.3.6'
   spec.add_development_dependency 'sprockets-rails', '~> 3.2.1'
+  spec.add_development_dependency 'sassc', '>= 2.0.0'
   spec.add_development_dependency 'turbolinks', '~> 5.2.0'
   spec.add_development_dependency 'uglifier', '~> 4.1.20'
 end
