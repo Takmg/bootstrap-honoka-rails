@@ -2,8 +2,11 @@
 require 'test_helper'
 require 'fileutils'
 
-# DummyRailsIntegration
+# DummyIntegration
 module DummyIntegration
+
+  # Capybara系のヘルパーメソッド
+
   # Mix-in
   include Capybara::DSL
   include Capybara::Minitest::Assertions
