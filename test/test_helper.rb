@@ -15,8 +15,7 @@ require 'webdrivers'
 
 # settings
 Webdrivers.cache_time = 10_000
-ROOT_PATH   = File.expand_path('../', File.dirname(__FILE__))
-DUMMY_PATH  = File.expand_path('dummy/', File.dirname(__FILE__))
+ROOT_PATH = File.expand_path('../', File.dirname(__FILE__))
 
 # support directory files require
 Dir['test/support/**/*.rb'].each do |file|
