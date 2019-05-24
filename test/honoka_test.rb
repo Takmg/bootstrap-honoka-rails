@@ -4,12 +4,21 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
   # Mix-in
   include DummyIntegration
 
-  # constant variables
-  TEST_PAGES = %w[honoka umi nico].map(&:freeze).freeze
+  # constant path
+  STYLESHEET_PATH = File.expand_path('app/assets/stylesheets', DUMMY_PATH)
+  
+  # constant stylesheets
+  STYLESHEETS =
+    Dir.glob("#{STYLESHEET_PATH}/*.css")
+       .map { |f| File.basename(f, File.extname(f)) }
+       .reject { |f| f == 'application' }
+
+  # constant data variables
+  TEST_PAGES = STYLESHEETS.map(&:freeze).freeze
   TEST_PATHS = TEST_PAGES.map { |el| "/pages/#{el}".freeze }.freeze
   TEST_DATAS = TEST_PAGES.zip(TEST_PATHS).map(&:freeze).freeze
 
-  # アクセステスト
+  # access test
   TEST_DATAS.each do |page, path|
     test "access #{page}" do
       begin
@@ -31,10 +40,9 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
   TEST_PAGES.each do |page|
     test "compile #{page}" do
       # Sassのコンパイルを行う
-      SassC::Engine.new("@import '_#{page}';", { 
-        load_paths: app.config.assets.paths 
-      }).render
-      
+      SassC::Engine.new("@import '_#{page}';",
+                        load_paths: app.config.assets.paths).render
+
       # 例外が発生せずここまで来れば assert成功
       assert true
     end
