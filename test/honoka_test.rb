@@ -26,4 +26,17 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  # compile test
+  TEST_PAGES.each do |page|
+    test "compile #{page}" do
+      # Sassのコンパイルを行う
+      SassC::Engine.new("@import '_#{page}';", { 
+        load_paths: app.config.assets.paths 
+      }).render
+      
+      # 例外が発生せずここまで来れば assert成功
+      assert true
+    end
+  end
 end
