@@ -1,33 +1,30 @@
 begin
+  # bundlerでインストールしたgemをrequireで読み取り可能とする。
   require 'bundler/setup'
 rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
-require 'rdoc/task'
+# requires
+require 'bundler/gem_tasks' # build, clobber, release などのコマンドを使用可能とする。
+require 'rdoc/task'         # RDoc::Taskクラスのrequireを行う。
+require 'rake/testtask'     # Rake::TestTaskクラスのrequireを行う。
 
+# rdoc, clobber_rdoc コマンド定義
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'Bootstrap::Honoka::Rails'
   rdoc.options << '--line-numbers'
-  rdoc.rdoc_files.include('README.md')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.rdoc_files.include('README.md', 'VERSIONS.md', 'lib/**/*.rb')
 end
 
-APP_RAKEFILE = File.expand_path('test/dummy/Rakefile', __dir__)
-load 'rails/tasks/engine.rake'
-
-load 'rails/tasks/statistics.rake'
-
-require 'bundler/gem_tasks'
-
-require 'rake/testtask'
-
+# test コマンド定義
 Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
-  t.warning = false
+  t.libs << 'test'                # require pathの追加
+  t.pattern = 'test/**/*_test.rb' # 実行するテストコマンド
+  t.verbose = false               # 詳細なテキストを非表示化
+  t.warning = false               # 警告を非表示
 end
 
+# test コマンドをrakeのデフォルト動作とする。
 task default: :test
