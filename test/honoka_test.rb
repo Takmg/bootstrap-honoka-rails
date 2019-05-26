@@ -6,11 +6,11 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
 
   # constant path
   STYLESHEET_PATH = File.expand_path('assets/stylesheets', ROOT_PATH)
-  
+
   # constant stylesheets
   STYLESHEETS =
     Dir.glob("#{STYLESHEET_PATH}/*.scss")
-       .map { |f| f.match(/.+\/_([^\/]+?)\.scss/)[1] }
+       .map { |f| f.match(%r{.+/_([^/]+?)\.scss})[1] }
 
   # constant data variables
   TEST_PAGES = STYLESHEETS.map(&:freeze).freeze
