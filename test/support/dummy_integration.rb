@@ -1,5 +1,4 @@
 # require files
-require 'test_helper'
 require 'fileutils'
 
 # DummyIntegration
