@@ -4,7 +4,6 @@ require 'fileutils'
 
 # DummyIntegration
 module DummyIntegration
-
   # Capybara系のヘルパーメソッド
 
   # Mix-in

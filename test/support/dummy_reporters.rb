@@ -3,9 +3,8 @@ require 'minitest/reporters'
 module Minitest
   module Reporters
     class DummyReporter < DefaultReporter
-
       # 最後にログ出力する際の文字列配列(下記注意点)
-      # 
+      #
       # 1)特異メソッド内から下記変数を参照する為、クラス変数にするべきと思われるかもしれないが、
       #   後にDummyReportersから継承される可能性を考慮すると、
       #   クラスインスタンス変数を使用する方が良いとの事。
@@ -22,10 +21,11 @@ module Minitest
       @log_strings = []
 
       # 特異メソッド
-      class << self 
-        def log_strings ; @log_strings; end
-        def log_strings_append!( rhs )
-           @log_strings << rhs if !rhs.nil?
+      class << self
+        attr_reader :log_strings
+
+        def log_strings_append!(rhs)
+          @log_strings << rhs unless rhs.nil?
         end
       end
 
@@ -39,16 +39,17 @@ module Minitest
       end
 
       # レポートを行う
-      def on_report 
-        super 
+      def on_report
+        super
         return if self.class.log_strings.empty?
-        puts 
-        puts cyan( '------------------------------------------------------------' )
-        puts magenta( '[TEST INFO]' )
-        self.class.log_strings.each do |data| 
-          puts yellow( data )
+
+        puts
+        puts cyan('------------------------------------------------------------')
+        puts magenta('[TEST INFO]')
+        self.class.log_strings.each do |data|
+          puts yellow(data)
         end
-        puts cyan( '------------------------------------------------------------' )
+        puts cyan('------------------------------------------------------------')
         puts
       end
     end
