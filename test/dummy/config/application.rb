@@ -1,12 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
-require 'jquery-rails'
-require 'sprockets'
-require 'turbolinks'
-require 'sassc'
-
-Bundler.require(*Rails.groups)
+Bundler.require(*Rails.groups << :development)
 
 module Dummy
   class Application < Rails::Application
