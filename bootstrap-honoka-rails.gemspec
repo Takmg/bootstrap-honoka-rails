@@ -24,14 +24,14 @@ Gem::Specification.new do |spec|
   end
 
   # Testing dependencies
-  spec.add_development_dependency 'pry-byebug', '>= 3.7.0'
   spec.add_development_dependency 'capybara', '>= 3.20.2'
-  spec.add_development_dependency 'webdrivers', '>= 3.9.4'
   spec.add_development_dependency 'jquery-rails', '>= 4.3.3'
   spec.add_development_dependency 'minitest', '~> 5.11.3'
   spec.add_development_dependency 'minitest-reporters', '~> 1.3.6'
-  spec.add_development_dependency 'sprockets-rails', '~> 3.2.1'
+  spec.add_development_dependency 'pry-byebug', '>= 3.7.0'
   spec.add_development_dependency 'sassc', '>= 2.0.0'
+  spec.add_development_dependency 'sprockets-rails', '~> 3.2.1'
   spec.add_development_dependency 'turbolinks', '~> 5.2.0'
   spec.add_development_dependency 'uglifier', '~> 4.1.20'
+  spec.add_development_dependency 'webdrivers', '>= 3.9.4'
 end
