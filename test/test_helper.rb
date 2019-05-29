@@ -1,7 +1,7 @@
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
-# require environment / rails / capybara 
+# require environment / rails / capybara
 require_relative 'dummy/config/environment'
 require 'rails/test_help'   # 内部でminitestのautorunも行う。
 require 'capybara/rails'    # 内部でcapybara/dslもrequireする。
@@ -9,7 +9,7 @@ require 'capybara/minitest'
 
 # settings
 Webdrivers.cache_time = 10_000
-ROOT_PATH = File.expand_path('../', File.dirname(__FILE__))
+ROOT_PATH = File.expand_path('../', File.dirname(__FILE__)).freeze
 
 # support directory files require
 Dir['test/support/**/*.rb'].each do |file|

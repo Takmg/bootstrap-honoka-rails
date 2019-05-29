@@ -13,9 +13,7 @@ module Bootstrap
 
         # initializer
         initializer 'bootstrap-honoka-rails.assets' do |app|
-          %w[stylesheets].each do |sub|
-            app.config.assets.paths << root.join('assets', sub).to_s
-          end
+          app.config.assets.paths << root.join('assets', 'stylesheets').to_s
         end
       end
     end

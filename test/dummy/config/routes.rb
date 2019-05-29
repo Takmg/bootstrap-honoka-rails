@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/honoka'
-  get 'pages/umi'
-  get 'pages/nico'
-  get 'pages/rin'
+  ::Bootstrap::Honoka::Rails.stylesheets.each do |s|
+    get "pages/#{s}"
+  end
 end
