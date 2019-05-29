@@ -4,13 +4,8 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
   # Mix-in
   include DummyIntegration
 
-  # constant path
-  STYLESHEET_PATH = File.expand_path('assets/stylesheets', ROOT_PATH)
-
   # constant stylesheets
-  STYLESHEETS =
-    Dir.glob("#{STYLESHEET_PATH}/*.scss")
-       .map { |f| f.match(%r{.+/_([^/]+?)\.scss})[1] }
+  STYLESHEETS = ::Bootstrap::Honoka::Rails.stylesheets
 
   # constant data variables
   TEST_PAGES = STYLESHEETS.map(&:freeze).freeze
