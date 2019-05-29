@@ -1,17 +1,11 @@
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
-# require environment
+# require environment / rails / capybara 
 require_relative 'dummy/config/environment'
-require 'rails/test_help'
-
-# require minitest capybara
-require 'minitest/autorun'
-require 'minitest/reporters'
-require 'capybara/rails'
+require 'rails/test_help'   # 内部でminitestのautorunも行う。
+require 'capybara/rails'    # 内部でcapybara/dslもrequireする。
 require 'capybara/minitest'
-require 'capybara/dsl'
-require 'webdrivers'
 
 # settings
 Webdrivers.cache_time = 10_000
