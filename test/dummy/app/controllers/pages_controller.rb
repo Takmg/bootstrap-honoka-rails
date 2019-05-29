@@ -1,9 +1,6 @@
 class PagesController < ApplicationController
-  def honoka; end
-
-  def umi; end
-
-  def nico; end
-
-  def rin; end
+  # action定義
+  ::Bootstrap::Honoka::Rails.stylesheets.each do |s|
+    define_method(s) {}
+  end
 end
