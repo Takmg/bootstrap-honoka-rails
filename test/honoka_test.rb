@@ -4,11 +4,8 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
   # Mix-in
   include DummyIntegration
 
-  # constant stylesheets
-  STYLESHEETS = ::Bootstrap::Honoka::Rails.stylesheets
-
   # constant data variables
-  TEST_PAGES = STYLESHEETS.map(&:freeze).freeze
+  TEST_PAGES = ::Bootstrap::Honoka::Rails::STYLE_SHEETS
   TEST_PATHS = TEST_PAGES.map { |el| "/pages/#{el}".freeze }.freeze
   TEST_DATAS = TEST_PAGES.zip(TEST_PATHS).map(&:freeze).freeze
 
