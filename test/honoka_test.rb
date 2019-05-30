@@ -9,6 +9,12 @@ class Bootstrap::Honoka::Rails::Test < ActionDispatch::IntegrationTest
   TEST_PATHS = TEST_PAGES.map { |el| "/pages/#{el}".freeze }.freeze
   TEST_DATAS = TEST_PAGES.zip(TEST_PATHS).map(&:freeze).freeze
 
+  # スタイルシートの個数確認
+  test 'stylesheet count' do
+    # スタイルシート数の確認
+    assert !TEST_PAGES.empty?, 'エラー：サポートされているスタイルシートが1つも存在していません。'
+  end
+
   # access test
   TEST_DATAS.each do |page, path|
     test "access #{page}" do
