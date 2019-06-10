@@ -14,5 +14,5 @@ Rakefile    text eol=lf
 *.scss      text eol=lf
 *.yml       text eol=lf
 *.sh        text eol=lf
-assets/*    linguist-documentation
+*.scss      linguist-language=scss
 *.html.erb  linguist-language=Ruby
