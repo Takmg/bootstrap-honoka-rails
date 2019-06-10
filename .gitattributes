@@ -15,4 +15,4 @@ Rakefile    text eol=lf
 *.yml       text eol=lf
 *.sh        text eol=lf
 assets/*    linguist-documentation
-test/*      linguist-documentation
+*.html.erb  linguist-language=Ruby
