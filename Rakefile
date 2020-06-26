@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 begin
   # bundlerでインストールしたgemをrequireで読み取り可能とする。
   require 'bundler/setup'
