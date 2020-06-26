@@ -1,6 +1,7 @@
 require_relative 'boot'
 
-require 'rails/all'
+# rails require exclude active record
+require "rails"
 Bundler.require(*Rails.groups << :development)
 
 module Dummy
