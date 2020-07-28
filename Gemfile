@@ -6,4 +6,5 @@ gemspec
 # To use a debugger
 group :debug do
   gem 'byebug', platforms: [:mri], require: false
+  gem 'solargraph'
 end
