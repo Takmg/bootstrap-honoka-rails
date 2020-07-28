@@ -15,8 +15,8 @@ Gemfile.lock
 /vendor
 /test/dummy/log
 /test/dummy/tmp
-/test/dummy/config/master.key
-/test/dummy/config/credentials.yml.enc
+**/config/master.key
+**/config/credentials.yml.enc
 .DS_Store
 
 # rspec failure tracking
