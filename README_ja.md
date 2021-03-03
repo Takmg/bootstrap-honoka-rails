@@ -10,7 +10,7 @@ bootstrap-honoka-rails は [Honoka](https://github.com/windyakin/Honoka) や [Um
 gemfile に下記記載します。
 
 ```ruby
-gem 'bootstrap-honoka-rails' , '~>4.3.1' # or '~> 3.3.7'
+gem 'bootstrap-honoka-rails' , '~>4.4.1' # or '~> 3.3.7'
 ```
 
 そして下記コマンドでインストール :

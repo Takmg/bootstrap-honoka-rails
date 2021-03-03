@@ -10,7 +10,7 @@ bootstrap-honoka-rails can easily install [Honoka](https://github.com/windyakin/
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap-honoka-rails' , '~>4.3.1' # or '~> 3.3.7'
+gem 'bootstrap-honoka-rails' , '~>4.4.1' # or '~> 3.3.7'
 ```
 
 And then execute:
